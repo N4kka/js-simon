@@ -51,6 +51,37 @@ function fifthNumber () {
     prompt("Quale era il quinto numero?");
 }
 
+//Ask the user his numbers and check if they're right, print the output with how many and which numbers are right
+const winNumbers = displayedNumbers;
+console.log(winNumbers);
+
+// **
+//  * Description: The result will be displayed with this function
+//  * @param {any} safeNumbersQuantity --> max number
+//  * @param {any} winLose --> The result
+//  * @returns {any}
+function endGame (safeNumbersQuantity, winLose) {
+    const resultTitle = document.getElementById("result");
+    let resultMessage;
+    if (winLose === "lose") {
+        resultMessage = `Hai perso! Hai totalizzato un punteggio di ${safeNumbersQuantity}`;
+    } else {
+        resultMessage = "Complimenti! Hai vinto, sei un mostro!"
+    }
+    resultTitle.innerHTML = resultMessage;
+}
+
+function checkedNumbers () {
+    const checkNumbers = "";
+    if (displayedNumbers = firstNumber, secondNumber, thirdNumber,fourthNumber ,fifthNumber) {
+        endGame (displayedNumbers.length, "win")
+        console.log("you win");
+    } else {
+        console.log("you lose");
+    }
+    console.log(checkedNumbers);
+}
+
 //Utilities function
 function getRndInteger(min, max) {
     return Math.floor(Math.random() * (max - min + 1) ) + min;
